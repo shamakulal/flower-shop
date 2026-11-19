@@ -1,24 +1,50 @@
-function About() {
+
+const About = () => {
   return (
     <section className="about-section" id="about">
-      <div className="about-image">
+      <div className="about-visual">
         <img
-          src="https://images.unsplash.com/photo-1444392061186-9fc38f9d0c5e?auto=format&fit=crop&w=1100&q=85"
-          alt="Florist arranging flowers in a studio"
+          src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1000"
+          alt="Beautiful pastel flowers arranged in a bouquet"
         />
+        <div className="about-image-note">
+          <span>OUR LITTLE PHILOSOPHY</span>
+          <strong>Beauty in every bloom.</strong>
+        </div>
       </div>
-      <div className="about-copy">
-        <p className="eyebrow">Made by hand</p>
-        <h2>Beautiful flowers,<br />personal to you.</h2>
-        <p>
-          Every bouquet begins with the season. Our florists pair thoughtful
-          textures and colors into arrangements that feel natural, warm, and
-          completely unique.
+
+      <div className="about-content">
+        <p className="about-eyebrow">✿ A LITTLE ABOUT US ✿</p>
+
+        <h2>
+          More than flowers,
+          <span> it's a feeling.</span>
+        </h2>
+
+        <p className="about-description">
+          At Bloom & Bliss, we believe that flowers have a
+          beautiful way of saying what words sometimes cannot.
+          Every bouquet is thoughtfully curated to celebrate
+          life's little moments and make them unforgettable.
         </p>
-        <a className="text-link" href="#about">Our story <span aria-hidden="true">→</span></a>
+
+        <p className="about-description">
+          From soft romantic roses to dreamy seasonal blooms,
+          we bring together colours, textures and emotions
+          to create something truly special.
+        </p>
+
+        <div className="about-signature">
+          <span>With love,</span>
+          <strong>Bloom & Bliss ♡</strong>
+        </div>
+
+        <a href="#shop" className="about-button">
+          Explore Our Flowers <span>↗</span>
+        </a>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -703,3 +703,171 @@
     font-size: 8px;
   }
 }
+
+
+
+/* ===== ABOUT SECTION ===== */
+
+.about-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 100px;
+  padding: 120px 10%;
+  background: #eee5f5;
+}
+
+.about-visual {
+  position: relative;
+  max-width: 440px;
+}
+
+.about-visual img {
+  width: 100%;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 220px 220px 12px 12px;
+  display: block;
+}
+
+.about-image-note {
+  position: absolute;
+  right: -45px;
+  bottom: 35px;
+  background: #fffaf8;
+  padding: 22px 28px;
+  box-shadow: 0 10px 35px rgba(89, 70, 95, 0.12);
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.about-image-note span {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #a187a5;
+}
+
+.about-image-note strong {
+  font-family: Georgia, serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #59465f;
+}
+
+.about-content {
+  max-width: 500px;
+}
+
+.about-eyebrow {
+  color: #98799e;
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.about-content h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(40px, 4.5vw, 58px);
+  font-weight: 400;
+  line-height: 1.2;
+  color: #59465f;
+}
+
+.about-content h2 span {
+  display: block;
+  color: #b1819d;
+  font-style: italic;
+}
+
+.about-description {
+  color: #817387;
+  font-size: 13px;
+  line-height: 2;
+  margin-top: 23px;
+}
+
+.about-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin-top: 30px;
+}
+
+.about-signature span {
+  color: #a187a5;
+  font-size: 11px;
+}
+
+.about-signature strong {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  font-style: italic;
+  font-weight: 400;
+  color: #745b7c;
+}
+
+.about-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 22px;
+  background: #745b7c;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  transition: 0.3s ease;
+}
+
+.about-button:hover {
+  background: #59465f;
+  transform: translateY(-3px);
+}
+
+.about-button span {
+  margin-left: 12px;
+}
+
+/* About responsive */
+
+@media (max-width: 850px) {
+  .about-section {
+    gap: 55px;
+    padding: 85px 7%;
+  }
+
+  .about-visual img {
+    height: 430px;
+  }
+
+  .about-image-note {
+    right: -15px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    gap: 55px;
+    padding: 75px 8%;
+  }
+
+  .about-visual {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .about-visual img {
+    height: 420px;
+  }
+
+  .about-image-note {
+    right: -10px;
+    bottom: 20px;
+    padding: 16px 19px;
+  }
+
+  .about-content {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
