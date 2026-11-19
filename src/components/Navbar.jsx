@@ -16,6 +16,15 @@ const Navbar = () => {
       </ul>
 
       <div className="navbar-actions">
+        <a
+          href="http://localhost:5174"
+          className="coffee-shop-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ☕ Visit Coffee Shop
+        </a>
+
         <a href="#shop" className="cart-button" aria-label="Shopping bag">
           <span className="cart-icon">♡</span>
           <span className="cart-label">Your Bag</span>

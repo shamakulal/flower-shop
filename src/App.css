@@ -871,3 +871,42 @@
     margin: 0 auto;
   }
 }
+
+
+
+/* ===== COFFEE SHOP NAVIGATION BUTTON ===== */
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.coffee-shop-button {
+  display: inline-block;
+  padding: 11px 15px;
+  background: #745b7c;
+  color: white;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+  white-space: nowrap;
+}
+
+.coffee-shop-button:hover {
+  background: #59465f;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 500px) {
+  .navbar-actions {
+    gap: 6px;
+  }
+
+  .coffee-shop-button {
+    padding: 9px 10px;
+    font-size: 9px;
+  }
+}
