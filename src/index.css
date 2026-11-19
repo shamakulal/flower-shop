@@ -1,0 +1,32 @@
+:root {
+  --primary: #A78BFA;
+  --primary-dark: #7C3AED;
+  --lavender-light: #F8F5FF;
+  --lavender-soft: #EDE5FF;
+  --text-primary: #34264A;
+  --text-secondary: #766A83;
+  --white: #FFFFFF;
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  --shadow: 0 8px 24px rgba(91, 58, 130, 0.10);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--lavender-light);
+  color: var(--text-primary);
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
