@@ -37,7 +37,7 @@ const Hero = () => {
       <div className="hero-visual">
         <div className="hero-image-frame">
           <img
-            src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=1200"
+            src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=1000"
             alt="Soft pastel floral bouquet"
           />
         </div>
