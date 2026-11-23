@@ -17,7 +17,7 @@ const Navbar = () => {
 
       <div className="navbar-actions">
         <a
-          href="http://localhost:5174"
+          href="https://coffee-shop-demo.duckdns.org"
           className="coffee-shop-button"
           target="_blank"
           rel="noopener noreferrer"
