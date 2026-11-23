@@ -88,7 +88,7 @@ stage('Deploy to Azure VM') {
 
             echo Connecting to Azure VM...
 
-            ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=15 -o StrictHostKeyChecking=accept-new "%SSH_USER%@20.175.74.194" "sudo -n /usr/local/bin/deploy-flower-shop %BUILD_NUMBER%"
+            ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=15 -o StrictHostKeyChecking=accept-new "%SSH_USER%@20.175.74.194" "sudo -n /bin/bash /usr/local/bin/deploy-flower-shop %BUILD_NUMBER%"
             '''
         }
     }
