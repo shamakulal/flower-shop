@@ -60,22 +60,40 @@ pipeline {
             }
         }
 
-        stage('Deploy to Azure VM') {
-            steps {
-                withCredentials([
-                    sshUserPrivateKey(
-                        credentialsId: 'flower-vm-ssh',
-                        keyFileVariable: 'SSH_KEY',
-                        usernameVariable: 'SSH_USER'
-                    )
-                ]) {
-                    bat '''
-                    @echo off
-                    ssh -i "%SSH_KEY%" -o StrictHostKeyChecking=accept-new "%SSH_USER%@20.175.74.194" "sudo /usr/local/bin/deploy-flower-shop %BUILD_NUMBER%"
-                    '''
-                }
-            }
+        
+stage('Deploy to Azure VM') {
+    steps {
+        withCredentials([
+            sshUserPrivateKey(
+                credentialsId: 'flower-vm-ssh',
+                keyFileVariable: 'SSH_KEY',
+                usernameVariable: 'SSH_USER'
+            )
+        ]) {
+            bat '''
+            @echo off
+
+            echo Fixing temporary SSH key permissions...
+
+            icacls "%SSH_KEY%" /inheritance:r
+            if errorlevel 1 exit /b 1
+
+            icacls "%SSH_KEY%" /remove:g "*S-1-5-32-545"
+            if errorlevel 1 exit /b 1
+
+            icacls "%SSH_KEY%" /grant:r "*S-1-5-18:F"
+            if errorlevel 1 exit /b 1
+
+            icacls "%SSH_KEY%"
+
+            echo Connecting to Azure VM...
+
+            ssh -i "%SSH_KEY%" -o BatchMode=yes -o ConnectTimeout=15 -o StrictHostKeyChecking=accept-new "%SSH_USER%@20.175.74.194" "sudo -n /usr/local/bin/deploy-flower-shop %BUILD_NUMBER%"
+            '''
         }
+    }
+}
+
 
         stage('Verify Website') {
             steps {
