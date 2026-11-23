@@ -9,7 +9,7 @@ const About = () => {
         />
         <div className="about-image-note">
           <span>OUR LITTLE PHILOSOPHY</span>
-          <strong>Beauty in every bloom.</strong>
+          <strong>✿Beauty in every bloom✿</strong>
         </div>
       </div>
 
